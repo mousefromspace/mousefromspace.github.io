@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+
+		function checkAnswer() {
+			var userAnswer = document.getElementById("userAnswer1").value;
+			var score = 0
+			userAnswer = userAnswer.toLowerCase();
+			if (userAnswer == "водопровод") {
+				score++;
+			}
+
+			userAnswer = document.getElementById("userAnswer2").value;
+			userAnswer = userAnswer.toLowerCase();
+			if (userAnswer == "морской" || userAnswer == "укус акулы") {
+				score++;
+			}
+
+			userAnswer = document.getElementById("userAnswer3").value;
+			userAnswer = userAnswer.toLowerCase();
+			if (userAnswer == "шахматный" || userAnswer == "мертвый") {
+				score++;
+			}
+
+			alert("Вы отгадали " + score + " загадок");
+		}
+
+	</script>
+</head>
+
+<body>
+
+	<div class="content">
+
+		<div class="header">
+			<a href="index.html">Главная</a>
+			<a href="puzzle.html">Загадки</a>
+			<a href="guess.html">Угадайка</a>
+		</div>
+
+		<div class="contentWrap">
+			<div class="content">
+				<div class="center">
+					<h1>Игра в загадки</h1>
+
+					<div class="box">
+
+						<p>Речка спятила с ума - По домам пошла сама</p>
+						<input type="text" id="userAnswer1">
+
+						<p>Какой болезнью никто не болеет на суше?</p>
+						<input type="text" id="userAnswer2">
+
+						<p>Какой конь не ест овса?</p>
+						<input type="text" id="userAnswer3">
+
+						<br>
+						<a href="#" onClick="checkAnswer();">Ответить</a>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		Copyright &copy; Barbie_Introvert
+	</div>
+
+</body>
+
+</html>
